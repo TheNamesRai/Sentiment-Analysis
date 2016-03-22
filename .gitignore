@@ -41,3 +41,6 @@ config.json
 
 #enviroment packages
 env/
+
+# DATABASES
+*.sqlite3
