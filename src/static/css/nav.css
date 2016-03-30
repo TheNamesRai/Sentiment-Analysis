@@ -1,0 +1,21 @@
+.navbar-fixed-top {
+    min-height: 72px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 72px;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;}
+}
+
+.navbar-brand{
+	margin:0;
+	padding:0;
+}

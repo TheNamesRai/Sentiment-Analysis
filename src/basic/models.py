@@ -28,7 +28,8 @@ class Reviews(models.Model):
 	review = models.CharField(max_length = 3000)
 	age = models.IntegerField()
 	gender = models.CharField(max_length=1 , choices=GENDER)
-
+	date = models.DateTimeField(auto_now_add=True, blank=True)
+	
 	overall = models.CharField(max_length=3,choices=REVIEWS_STATUS , null=True)
 	camera = models.CharField(max_length=3 , choices=REVIEWS_STATUS , null=True) 
 	performance = models.CharField(max_length=3 , choices=REVIEWS_STATUS , null=True) 
