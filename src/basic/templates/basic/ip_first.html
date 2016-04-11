@@ -1,0 +1,350 @@
+﻿{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>webopin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/ip_first_css.css' %}">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 1000, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="{% url 'basic:index' %}">WEBOPIN</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#pricing">DASHBOARD</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+   <h1>Webopin</h1> 
+   <p>Get social insights for your business</p> 
+   <form class="form-inline">
+       <div class="form-group">
+           <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Brand">
+       </div>
+       <div class="form-group">
+           <input type="text" class="form-control" id="exampleInputPassword3" placeholder="Model">
+       </div>
+       <button type="submit" class="btn btn-default">Search</button>
+   </form>
+</div>
+
+<!-- about -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Webopin</h2><br>
+      <h4>We build smart software solutions that help marketers capture, analyze and share insights
+      from social data to better prove the value of marketing in social.we are an open source community with over 3 developers worldwide.</h4><br>
+      <p>Webopin gives you instant access to conversations from every corner of the public web as they happen. Our coverage spans 4 thousand online sources, so you can be confident you will never miss a mention that matters.Add context to the billions of conversations happening online every day. webopin Analytics tells you more about the conversations, trends and people impacting your business.</p>
+      <br>
+    </div>
+    <div class="col-sm-4 slideanim">
+      <span> <img class="about-img" src="{% static 'images/random/about1.png' %}" width="350" height="280"> </span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>How this work's</h2><br>
+      <h4><strong>WORK: </strong>Webopin Analytics is a browser-based platform, made available on a free and monthly subscription basis.
+      We have a range of plans to meet different business needs, from SMBs to agencies to large enterprises. 
+      Get in touch and we’ll be happy to discuss the best package to suit your needs..</h4><br>
+      <p><strong>VISION:</strong> As a full-service consulting firm, we bring together a comprehensive understanding of the latest technologies regarding data warehousing, performance management, and business intelligence, along with experience in a variety of industries ranging from health care to financial services.
+      Utilizing the latest technologies, we deliver critical information to our clients when and where they need it for faster, to meet their growing needs in today's competitive environment.</p>
+    </div>
+  </div>
+</div>
+
+<!-- service -->
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h3>Why choose webopin analytics</h3>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <img src="{% static 'images/random/services1.png' %}" width="102" height="98">
+      <h4>Great data</h4>
+      <p>We crawl and store all our own data, plus have the most simple but accurate Query builder on the market, ensuring that you get quality, useful data without the noise of spam and duplicate mentions.</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="{% static 'images/random/services2.png' %}" width="102" height="98">
+      <h4>Focused on value</h4>
+      <p>Our platform is geared towards helping you uncover and optimize the value of marketing in social, through richer data, smarter tools and more intelligent insights than anyone else</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="{% static 'images/random/services3.png' %}" width="102" height="98">
+      <h4>Highly Flexible</h4>
+      <p>Brandwatch Analytics is highly flexible, allowing you to uncover the insights you need without restricting you. That includes an extensive selection of features for analysis, including advanced filtering, tagging and categorization.</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <img src="{% static 'images/random/services4.png' %}" width="102" height="98">
+      <h4>Built for collaboration</h4>
+      <p>We know that collaboration is key when it comes to social, so we also have plenty of workflow features and provide unlimited users as standard. We also have a number of partnerships.</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="{% static 'images/random/services5.png' %}" width="102" height="98">
+      <h4>Next level intelligence</h4>
+      <p>We’re focused on forging the path for the next level of social intelligence. From automated alerting for emerging issues and trends, to smart attribution through earned vs owned analysis.</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="{% static 'images/random/services6.png' %}" width="102" height="98">
+      <h4 style="color:#303030;">World class support</h4>
+      <p>Our customer service is unrivalled. All of our support and account management is in-house, with a team of smart, helpful and friendly people on hand to help you, whether that’s advice on strategy or help writing a tricky Query.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- hamara dashboard -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Powerful features, Simply designed</h2>
+    <h4>Customize your dashboard according to your need.</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>dashboard 1</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20</strong> photo</p>
+          <p><strong>15</strong> photo</p>
+          <p><strong>5</strong> photo</p>
+          <p><strong>2</strong> photo</p>
+          <p><strong>Endless</strong> photo</p>
+        </div>
+        <div class="panel-footer">
+          <h3>Get the data from the best websites</h3>
+          <h4>for $99</h4>
+          <button class="btn btn-lg" >get started</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>dashboard 2</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>50</strong> photo</p>
+          <p><strong>25</strong> photo</p>
+          <p><strong>10</strong> photo</p>
+          <p><strong>5</strong> photo</p>
+          <p><strong>Endless</strong> photo</p>
+        </div>
+        <div class="panel-footer">
+          <h3>See the trend over a period of time</h3>
+          <h4>for $50</h4>
+          <button class="btn btn-lg">get started</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>dashboard 3</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>100</strong> photo</p>
+          <p><strong>50</strong> photo</p>
+          <p><strong>25</strong> photo</p>
+          <p><strong>10</strong> photo</p>
+          <p><strong>Endless</strong> photo</p>
+        </div>
+        <div class="panel-footer">
+          <h3>Get data according to gender</h3>
+          <h4>for FREE</h4>
+          <button class="btn btn-lg">get started</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- review -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">Love a phone. review it!</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Review a phone and we'll update it within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Rajpura, Punjab</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +91 9545632134</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> support@webopin.com</p>	   
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 form-group">
+          <input class="form-control" id="Brand" name="Brand" placeholder="Brand" type="text" required>
+        </div>
+        <div class="col-sm-3 form-group">
+          <input class="form-control" id="Model" name="Model" placeholder="Model" type="text" required>
+        </div>
+        <div class="col-sm-3 form-group">
+        <form role="form">
+          <label class="radio-inline">
+            <input type="radio" name="optradio">Male
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio">Female
+          </label>
+        </form>
+        </div>
+        <div class="col-sm-3 form-group">
+          <input class="form-control" id="age" name="age" placeholder="age" type="text" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>	
+    </div>
+  </div>
+</div>
+
+<div id="googleMap" style="height:400px;width:100%;"></div>
+
+
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(30.701624, 76.781314);
+
+function initialize() {
+var mapProp = {
+  center:myCenter,
+  zoom:12,
+  scrollwheel:false,
+  draggable:false,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>&copy2016 Webopin, inc.</p>
+  <p id="footer-text">
+      <a >About</a>
+       &bull;
+      <a >Careers</a>
+       &bull;
+      <a >Blog</a>
+       &bull;
+      <a >Affiliate Program</a>
+       &bull;
+      <a >Terms</a>
+       &bull;
+      <a >Privacy</a>
+       &bull;
+      <a >Press Kit</a>
+       &bull;
+      <a >Contact</a>
+   </p>	
+   <p id="img_cont">
+      <a href="#"><img src="facebook.png" /></a>
+      <a href="#"><img src="google+.png" /></a>
+      <a href="#"><img src="twitter.png" /></a>
+      <a href="#"><img src="you_tube.png" /></a>
+      <a href="#"><img src="rss.png" /></a>
+      <a href="#"><img src="vimeo.png" /></a>
+   </p>
+</footer>
+
+</body>
+</html>
