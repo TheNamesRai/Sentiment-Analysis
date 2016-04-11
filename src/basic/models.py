@@ -25,6 +25,7 @@ class Reviews(models.Model):
 	)
 	product = models.ForeignKey(Products, on_delete=models.CASCADE)
 	name = models.CharField(max_length = 30)
+	email = models.EmailField()
 	review = models.CharField(max_length = 3000)
 	age = models.IntegerField()
 	gender = models.CharField(max_length=1 , choices=GENDER)
