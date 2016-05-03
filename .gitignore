@@ -42,5 +42,8 @@ config.json
 #enviroment packages
 env/
 
+#images
+images/
+
 # DATABASES
 *.sqlite3
