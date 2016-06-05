@@ -1,0 +1,117 @@
+    .row.content {
+      height: 645px;
+    }
+    
+    .sidenav {
+      background-color: #f4511e; 
+      color: #ffffff;
+      font-family: Montserrat, sans-serif;
+      height: 100%;
+      width: 25%;
+      position: fixed;
+    }
+    .sidenav h2 {
+      letter-spacing: 3px;
+      color: #ffffff !important;
+      height: 25px;
+    }
+    h2 {
+      color:  #f4511e; 
+    }
+    h4,p {
+      color: #33ccff ;
+      font-size: 16px;
+
+    }
+    .well {
+      text-align: center;
+      font-family: Lato, sans-serif;
+      background-color: #ffffff;
+    } 
+    #piechart_div,#piechart_div_cam, #piechart_div_per, #piechart_div_bat {
+      width: 475px;
+      padding-left: 70px;
+    }
+    .well:hover, #piechart_div:hover, #barchart_div:hover, #chart_div:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+    } 
+
+    #piechart_div_cam:hover, #barchart_div_cam:hover, #chart_div_cam:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+    } 
+
+    #piechart_div_per:hover, #barchart_div_per:hover, #chart_div_per:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+    } 
+
+    #piechart_div_bat:hover, #barchart_div_bat:hover, #chart_div_bat:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+    } 
+
+    .well.first h4 {
+      color: #669900 ;
+      font-weight: bold;
+    }
+    .well.first p {
+      color: #669900 ;
+      font-weight: bold;
+    }
+    .well.second h4 {
+      color: #99003d ;
+      font-weight: bold;
+    }
+    .well.second p {
+      color: #99003d ;
+      font-weight: bold;
+    }
+    .well.third {
+      width: 230px;
+    }
+    .well.third h4 {
+      color: #994d00 ;
+      font-weight: bold;
+    }
+    .well.third p {
+      color: #994d00 ;
+      font-weight: bold;
+    }
+    .well.fourth h4,p {
+      color: #00b359 ;
+      font-weight: bold;
+    }
+    .sidenav li a {
+      color: #ffffff;
+    }
+    .sidenav li a:hover {
+      color: #f4511e;
+    }
+    #piechart_div,#barchart_div, #chart_div,#piechart_div_cam,#barchart_div_cam, #chart_div_cam,#piechart_div_per,#barchart_div_per, #chart_div_per,#piechart_div_bat,#barchart_div_bat, #chart_div_bat {
+      border: 1px solid #d3d3d3;
+    }
+    footer {
+      background-color: #ccffff;
+      font-family: Lato, sans-serif;
+      padding: 5px;
+    }
+    footer p {
+      margin-left: 300px;
+      padding-top: 5px;
+      color: #99003d !important;
+      font-size: 12px !important;
+    }
+    #bound {
+      border: 1px solid #d3d3d3;
+      padding: 14px;
+    }
+    @media screen and (max-width: 467px) {
+      .row.content {height: auto;} 
+    }
+
+
+
+
+
+
+
+
+    

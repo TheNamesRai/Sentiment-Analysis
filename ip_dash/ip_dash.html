@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Webopin | Analyze your business with us</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  
+    <script type="text/javascript" src="ip_dash_js.js">
+      // Load the Visualization API and the corechart package.
+    </script>
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="ip_dash_css.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Webopin</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Buy</a></li>
+        <li><a href="#">Resource</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 left sidenav hidden-xs">
+      <h2>WEBOPIN</h2>
+      <hr>
+      <ul class="nav nav-pills nav-stacked ">
+        <li><a href="#section1">Dashboard</a></li>
+        <li><a href="#section2">Home</a></li>
+        <li><a href="#section3">Buy</a></li>
+        <li><a href="#section3">Resource</a></li>
+      </ul>
+      <br>
+    </div>
+      
+    
+    <div class="col-sm-9 pull-right">
+      <h2><small>WEBOPIN ANALYSIS</small></h2>
+      <hr>
+     <div id="bound">
+      <div class="well">
+        <h2>Query: iPhone 6</h2>
+        <h5><span class="glyphicon glyphicon-time"></span> Search for iphone 6, April 18, 2016.</h5>
+        <h5><span class="label label-danger">Mobile</span> <span class="label label-primary">Smartphone</span></h5>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well first">
+            <h4>Total Votes</h4>
+            <p>1 Million</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well row second">
+            <div class="col-sm-6">
+                   <h4>Male</h4>
+                   <p>425</p> 
+            </div>
+            <div class="col-sm-6">                
+                   <h4>Female</h4>
+                   <p>675</p>                 
+            </div> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well third">
+            <h4>Positive</h4>
+            <p>10 Lakhs</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well fourth">
+            <h4>Negative</h4>
+            <p>30%</p> 
+          </div>
+        </div>
+      </div>
+      <div class="row phone">
+        <div class="col-sm-6 ">
+          <div  id="piechart_div" >
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div id="barchart_div">
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row phone-graph">
+        <div class="col-sm-12 chart_main_2">
+          <div id="chart_div">
+          </div>
+        </div>
+      </div>
+
+      <hr>
+      
+      <div class="well">
+        <h2>Label: iPhone 6's Camera</h2>
+        <h5><span class="glyphicon glyphicon-time"></span> Search for iphone 6, April 18, 2016.</h5>
+        <h5><span class="label label-danger">Mobile</span> <span class="label label-primary">Smartphone</span></h5>
+      </div>
+
+      <div class="row cam">
+        <div class="col-sm-6">
+          <div  id="piechart_div_cam" >
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div id="barchart_div_cam">
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row cam-graph">
+        <div class="col-sm-12">
+          <div id="chart_div_cam">
+          </div>
+        </div>
+      </div>
+      
+      <hr>
+      
+      <div class="well">
+        <h2>Label: iPhone 6's Performance</h2>
+        <h5><span class="glyphicon glyphicon-time"></span> Search for iphone 6, April 18, 2016.</h5>
+        <h5><span class="label label-danger">Mobile</span> <span class="label label-primary">Smartphone</span></h5>
+      </div>
+
+      <div class="row per">
+        <div class="col-sm-6">
+          <div  id="piechart_div_per" >
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div id="barchart_div_per">
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row per-graph">
+        <div class="col-sm-12">
+          <div id="chart_div_per">
+          </div>
+        </div>
+      </div>
+      
+      <hr>
+      
+      <div class="well">
+        <h2>Label: iPhone 6's Battery</h2>
+        <h5><span class="glyphicon glyphicon-time"></span> Search for iphone 6, April 18, 2016.</h5>
+        <h5><span class="label label-danger">Mobile</span> <span class="label label-primary">Smartphone</span></h5>
+      </div>
+
+      <div class="row bat">
+        <div class="col-sm-6">
+          <div  id="piechart_div_bat" >
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div id="barchart_div_bat">
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row bat-graph">
+        <div class="col-sm-12">
+          <div id="chart_div_bat">
+          </div>
+        </div>
+      </div>
+     </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<footer class="container-fluid text-center">
+  <p>Copyright © 2016 Webopin Inc.</p>
+</footer>
+
+</body>
+</html>
